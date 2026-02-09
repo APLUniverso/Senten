@@ -1,13 +1,39 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: #1D2B53;
+}
+
+.contenedorBotones{
+    display: flex;
+    justify-content: center;
+}
+
+/*temporal*/
+p{
+    color: white;
+}
+
 #morse-btn {
     width: 120px;
     height: 120px;
-    background: red;
+    background: #FF004D;
     border-radius: 50%;
     cursor: pointer;
     user-select: none;
-  }
-  
+}
+
 #morse-btn:active {
     transform: scale(0.95);
-  }
-  
+}
+
+#espacio{
+    background-color: #FAEF5D;
+    width: 120px;
+    height: 120px;
+    cursor: pointer;
+    user-select: none;
+}
