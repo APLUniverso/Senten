@@ -34,11 +34,10 @@ const letraAMorse = {
 function crearMensaje(){
     salida.textContent = "";
 
-    const mensaje = inputText.value.toUpperCase();
+    const mensaje = inputText.value.toUpperCase() + " ";
     let codigoMorse = [];
     let palabra = [];
 
-    //falta una palabra porque no marca al final le falta un espacio paraq eu salga
     for (const letra of mensaje) {
         if (letra === " ") {
             codigoMorse.push("(" + palabra.join("/") + ")");
