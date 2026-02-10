@@ -29,23 +29,28 @@ const letraAMorse = {
     X: "-..-",
     Y: "-.--",
     Z: "--.."
-  };
+};
 
 function crearMensaje(){
-    salida.textContent = ""
+    salida.textContent = "";
 
-    const mensaje = inputText.value
-    const textoMayus = mensaje.toUpperCase();
+    const mensaje = inputText.value.toUpperCase();
+    let codigoMorse = [];
+    let palabra = [];
 
-    codigoMorse = []
-    for (const letra of textoMayus) {
-        codigoMorse.push(letraAMorse[letra])
+    //falta una palabra porque no marca al final le falta un espacio paraq eu salga
+    for (const letra of mensaje) {
+        if (letra === " ") {
+            codigoMorse.push("(" + palabra.join("/") + ")");
+            palabra = [];
+        } else if (letraAMorse[letra]) {
+            palabra.push(letraAMorse[letra]);
+        }
     }
 
-    salida.textContent = codigoMorse.join("/")
+    inputText.value = "";
+    salida.textContent = codigoMorse.join(" | ");
 }
-
-
 
 btnTraducir.addEventListener("click",crearMensaje)
 
@@ -53,4 +58,4 @@ inputText.addEventListener("keydown", function (e) {
     if (e.key === "Enter") {
         crearMensaje();
     }
-  });
+});
