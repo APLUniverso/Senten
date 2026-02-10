@@ -83,5 +83,5 @@ espacio.addEventListener("click", putEspacio);
 borrar.addEventListener("click", eliminar)
 
 // Eventos móvil
-btn.addEventListener("touchstart", iniciar);
-btn.addEventListener("touchend", terminar);
+btn.addEventListener("pointerdown", iniciar);
+btn.addEventListener("pointerup", terminar);

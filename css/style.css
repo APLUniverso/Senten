@@ -52,6 +52,7 @@ main{
 }
 
 .btn{
+    touch-action: manipulation;
     position: relative;
 
     cursor: pointer;
