@@ -137,17 +137,3 @@ main{
     text-align: center;
     color: #ECEFF8;
 }
-
-.navegar{
-    position: absolute;
-
-    text-decoration: none;
-    background-color: #869BD5;
-    color: #131C35;
-    font-size: 40px;
-    border-radius: 100px;
-
-    padding: 15px;
-    bottom: 20px;
-    right: 20px;
-}

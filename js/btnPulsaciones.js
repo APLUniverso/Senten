@@ -10,6 +10,35 @@ const textoSalida = document.getElementById("texto");
 const espacio = document.getElementById("espacio");
 const borrar = document.getElementById("borrar")
 
+const morseDiccionario = {
+  ".-": "A",
+  "-...": "B",
+  "-.-.": "C",
+  "-..": "D",
+  ".": "E",
+  "..-.": "F",
+  "--.": "G",
+  "....": "H",
+  "..": "I",
+  ".---": "J",
+  "-.-": "K",
+  ".-..": "L",
+  "--": "M",
+  "-.": "N",
+  "---": "O",
+  ".--.": "P",
+  "--.-": "Q",
+  ".-.": "R",
+  "...": "S",
+  "-": "T",
+  "..-": "U",
+  "...-": "V",
+  ".--": "W",
+  "-..-": "X",
+  "-.--": "Y",
+  "--..": "Z"
+};
+
 const PAUSA_LETRA = 800;
 const UMBRAL = 300;
 
@@ -48,34 +77,11 @@ function putEspacio(){
 
 function traducir() {
   const morse = morseSalida.textContent;
-  if (morse === ".-") {textoSalida.textContent += "A";}
-  else if (morse === "-...") { textoSalida.textContent += "B";}
-  else if (morse === "-.-.") { textoSalida.textContent += "C";}
-  else if (morse === "-..")  { textoSalida.textContent += "D";}
-  else if (morse === ".")    { textoSalida.textContent += "E";}
-  else if (morse === "..-.") { textoSalida.textContent += "F";}
-  else if (morse === "--.")  { textoSalida.textContent += "G";}
-  else if (morse === "....") { textoSalida.textContent += "H";}
-  else if (morse === "..")   { textoSalida.textContent += "I";}
-  else if (morse === ".---") { textoSalida.textContent += "J";}
-  else if (morse === "-.-")  { textoSalida.textContent += "K";}
-  else if (morse === ".-..") { textoSalida.textContent += "L";}
-  else if (morse === "--")   { textoSalida.textContent += "M";}
-  else if (morse === "-.")   { textoSalida.textContent += "N";}
-  else if (morse === "---")  { textoSalida.textContent += "O";}
-  else if (morse === ".--.") { textoSalida.textContent += "P";}
-  else if (morse === "--.-") { textoSalida.textContent += "Q";}
-  else if (morse === ".-.")  { textoSalida.textContent += "R";}
-  else if (morse === "...")  { textoSalida.textContent += "S";}
-  else if (morse === "-")    { textoSalida.textContent += "T";}
-  else if (morse === "..-")  { textoSalida.textContent += "U";}
-  else if (morse === "...-") { textoSalida.textContent += "V";}
-  else if (morse === ".--")  { textoSalida.textContent += "W";}
-  else if (morse === "-..-") { textoSalida.textContent += "X";}
-  else if (morse === "-.--") { textoSalida.textContent += "Y";}
-  else if (morse === "--..") { textoSalida.textContent += "Z";}
-  else {textoSalida.textContent += "";}
 
+  if (morseDiccionario[morse]) {
+    textoSalida.textContent += morseDiccionario[morse];
+  }
+  
   morseSalida.textContent = "";
 }
 
