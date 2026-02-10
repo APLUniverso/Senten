@@ -1,7 +1,14 @@
 const btn = document.getElementById("morse-btn");
+
+//OUTPUT DONDE SE VE EL MORSE
 const morseSalida = document.getElementById("morse");
+
+//OUTPUT DONDE SE VE EL MORSE TRADUCIDO
 const textoSalida = document.getElementById("texto");
+
+//MODIFICAR EL TEXTO
 const espacio = document.getElementById("espacio");
+const borrar = document.getElementById("borrar")
 
 const PAUSA_LETRA = 800;
 const UMBRAL = 300;
@@ -29,6 +36,14 @@ function terminar() {
   temporizadorLetra = setTimeout(() => {
     traducir();
   }, PAUSA_LETRA);
+}
+
+function eliminar(){
+  textoSalida.textContent = textoSalida.textContent.slice(0, -1);
+}
+
+function putEspacio(){
+  textoSalida.textContent += " ";
 }
 
 function traducir() {
@@ -64,15 +79,12 @@ function traducir() {
   morseSalida.textContent = "";
 }
 
-function putEspacio(){
-  textoSalida.textContent += " ";
-}
-
 // Eventos PC
 btn.addEventListener("mousedown", iniciar);
 btn.addEventListener("mouseup", terminar);
 
 espacio.addEventListener("click", putEspacio);
+borrar.addEventListener("click", eliminar)
 
 // Eventos móvil
 btn.addEventListener("touchstart", iniciar);

@@ -5,15 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Senten</title>
 
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-    <div class="contenedorBotones">
-        <div id="morse-btn"></div>
-        <div id="espacio"></div>
-    </div>
-    <p id="morse"></p>
-    <p id="texto"></p>
+    <main>
+        <div class="contenedorBotones">
+            <div class="btn" id="espacio"> 
+                <div class="brillo"></div>
+                <div class="punta"></div>
+                <div class="brillo2"></div>
+                <div class="brillo3"></div>
+            </div>
+            <div class="btn" id="morse-btn">
+                <div class="brillo"></div>
+                <div class="punta"></div>
+                <div class="brillo2"></div>
+                <div class="brillo3"></div>
+            </div>
+            <div class="btn" id="borrar">
+                <div class="brillo"></div>
+                <div class="punta"></div>
+                <div class="brillo2"></div>
+                <div class="brillo3"></div>
+            </div>
+        </div>
+        <div class="output">
+            <div class="pContainer">
+                <p class="textoMorse" id="morse"></p>
+            </div>
+            <div class="pContainer">
+                <p class="mensaje" id="texto"></p>
+            </div>
+        </div>
+    </main>
     <script src="./js/btnPulsaciones.js"></script>
 </body>
 </html>

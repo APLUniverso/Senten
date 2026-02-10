@@ -5,35 +5,133 @@
 
 body{
     background-color: #1D2B53;
+    font-family: 'Press Start 2P', monospace;
+
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+}
+
+main{
+    margin: auto;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 80vw;
 }
 
 .contenedorBotones{
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
     justify-content: center;
-}
+    gap: 20px;
 
-/*temporal*/
-p{
-    color: white;
+    width: 100%;
+
+    margin-bottom: 30px;
 }
 
 #morse-btn {
-    width: 120px;
-    height: 120px;
     background: #FF004D;
-    border-radius: 50%;
-    cursor: pointer;
-    user-select: none;
+    height: 200px;
 }
-
-#morse-btn:active {
-    transform: scale(0.95);
-}
-
 #espacio{
-    background-color: #FAEF5D;
-    width: 120px;
-    height: 120px;
+    background: #FAEF5D;
+    height: 200px;
+}
+
+#borrar{
+    background: #7E2553;
+    height: 100px;
+    
+    grid-column: 1/3;
+}
+
+.btn{
+    position: relative;
+
     cursor: pointer;
     user-select: none;
+
+    border-radius: 20px;
+    box-shadow: 10px 10px 0 0px #868686;
+}
+
+.btn:active{
+    transform: translate(5px,5px);
+    box-shadow: 5px 5px 0 0px #868686;
+
+}
+
+.brillo{
+    position: absolute;
+
+    width: 15px;
+    height: 40%;
+
+    background: white;
+    border-radius: 10px;
+    right: 15px;
+    top: 5%;
+}
+.brillo2{
+    position: absolute;
+
+    width: 5px;
+    height: 60%;
+
+    background: white;
+    border-radius: 10px;
+    left: 15px;
+    bottom: 15px;
+}
+.brillo3{
+    position: absolute;
+
+    width: 40px;
+    height: 5px;
+
+    background: white;
+    border-radius: 10px;
+    left: 15px;
+    bottom: 15px;
+}
+.punta{
+    position: absolute;
+
+    width: 15px;
+    height: 15px;
+
+    background: white;
+    border-radius: 10px;
+    right: 15px;
+    top: 50%;
+}
+
+.output{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    width: 100%;
+}
+
+.pContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #131C35;
+
+    border: 5px solid #869BD5;
+    border-radius: 10px;
+    height: 40px;
+}
+
+.output p{
+    text-align: center;
+    color: #ECEFF8;
 }
