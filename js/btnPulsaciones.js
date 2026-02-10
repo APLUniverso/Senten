@@ -86,6 +86,3 @@ btn.addEventListener("mouseup", terminar);
 espacio.addEventListener("click", putEspacio);
 borrar.addEventListener("click", eliminar)
 
-// Eventos móvil
-btn.addEventListener("touchstart", iniciar);
-btn.addEventListener("touchend", terminar);
